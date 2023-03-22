@@ -9,7 +9,6 @@ class MyAppBar extends StatelessWidget  {
       
       appBar: AppBar(
         
-        //toolbarHeight: 80,
         backgroundColor: Colors.white,
         centerTitle: true,
         actions: <Widget>[
@@ -21,6 +20,4 @@ class MyAppBar extends StatelessWidget  {
     );
   }
   
-  /*@override
-  Size get preferredSize => new Size.fromHeight(AppBar().preferredSize.height);*/
 }

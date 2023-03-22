@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:intern_flutter_hw/widgets/PageView.dart';
 import 'package:intern_flutter_hw/widgets/appBar.dart';
+import 'package:intern_flutter_hw/widgets/describe.dart';
+import 'package:intern_flutter_hw/widgets/title.dart';
 
 void main() {
   runApp(const MyApp());
@@ -34,22 +36,22 @@ class _MyHomePageState extends State<MyHomePage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Color.fromARGB(255, 231, 228, 228),
+      backgroundColor: Color.fromARGB(255, 241, 240, 240),
       appBar: const PreferredSize(
           child: MyAppBar(), preferredSize: Size.fromHeight(50)),
       body: Container(
-          padding: EdgeInsets.all(16),
-          child: Container(
-            child: ListView(
-              children: [
-                Container(
-                  width: 235,
-                  height: 260,
-                  child: ImageSwiper(),
-                ),
-              ],
-            ),
-          )),
+        child: ListView(
+          children: const [
+            ImageSwiper(),
+            TitleWidget(),
+            SizedBox(height: 10,),
+            DescribeWidget(),
+
+            
+            
+          ],
+        ),
+      ),
     );
   }
 }
