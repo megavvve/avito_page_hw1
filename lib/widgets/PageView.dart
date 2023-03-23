@@ -9,6 +9,7 @@ class ImageSwiper extends StatefulWidget {
 class _ImageSwiperState extends State<ImageSwiper> {
   int _numPage = 1;
 
+  // ignore: non_constant_identifier_names
   void _ChangePage() {
     setState(() {
       _numPage++;
