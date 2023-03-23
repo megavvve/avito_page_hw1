@@ -18,12 +18,11 @@ class _ImageSwiperState extends State<ImageSwiper> {
   @override
   Widget build(BuildContext context) {
     return Container(
-      padding: const EdgeInsets.only(top:16, left:16, right:16),
+      padding: const EdgeInsets.only(top: 16, left: 16, right: 16),
       width: 235,
       height: 260,
       child: Stack(
         children: [
-          
           PageView(
             onPageChanged: (index) {
               _numPage = index;
@@ -42,24 +41,27 @@ class _ImageSwiperState extends State<ImageSwiper> {
             alignment: const Alignment(0, 0.85),
             child: Container(
               decoration: BoxDecoration(
-              
                 borderRadius: BorderRadius.circular(6),
                 color: Colors.black.withOpacity(0.5),
               ),
-              padding: const EdgeInsets.only(top:5, bottom:5, left:11, right:13),
-              child:  RichText(
-                text:TextSpan(text: _numPage.toString(),
-                style: const TextStyle(
-                  color: Colors.white,
-                  fontSize: 10,
-                ),
-                children: const <TextSpan>[
-                  TextSpan(text: '/5',style:TextStyle(
-                  color: Colors.white,
-                  fontSize: 10,
-                ), )
-                ]),
-                
+              padding:
+                  const EdgeInsets.only(top: 5, bottom: 5, left: 11, right: 13),
+              child: RichText(
+                text: TextSpan(
+                    text: _numPage.toString(),
+                    style: const TextStyle(
+                      color: Colors.white,
+                      fontSize: 10,
+                    ),
+                    children: const <TextSpan>[
+                      TextSpan(
+                        text: '/5',
+                        style: TextStyle(
+                          color: Colors.white,
+                          fontSize: 10,
+                        ),
+                      )
+                    ]),
               ),
             ),
           ),
