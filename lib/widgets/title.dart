@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 class TitleWidget extends StatelessWidget {
   const TitleWidget({super.key});
@@ -7,47 +8,51 @@ class TitleWidget extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       color: Colors.white,
-      height: 130,
+      height: 109.h,
       child: Padding(
-        padding:
-            const EdgeInsets.only(top: 12, bottom: 12, left: 16, right: 16),
+        padding: EdgeInsets.only(top: 12, left: 16.w, right: 16.w),
         child: Column(
           children: [
-            const Align(
+            Align(
                 alignment: Alignment.centerLeft,
                 child: Text(
                   'Квартира-студия, 40м, 16/23 эт.',
-                  style: TextStyle(fontSize: 20),
+                  style: TextStyle(fontSize: 18.h),
                 )),
-            const SizedBox(
-              height: 12,
+            SizedBox(
+              height: 2.h,
             ),
             Row(
-              children: const [
-                Icon(
+              children: [
+                const Icon(
                   Icons.location_on,
                   color: Colors.blue,
+                  
                 ),
                 Text(
                   'Центр (Кировский р-н.), Очаковская, 39',
                   style: TextStyle(
-                      color: Colors.blue, fontWeight: FontWeight.w300),
+                      color: Colors.blue,
+                      fontWeight: FontWeight.w300,
+                      fontSize: 13.h),
                 ),
               ],
             ),
-            const SizedBox(
-              height: 12,
+            SizedBox(
+              height: 10.h,
             ),
             Align(
                 alignment: Alignment.bottomLeft,
                 child: Container(
-                  width: 90,
-                  height: 30,
+                  width: 82.w,
+                  height: 27.h,
                   color: Colors.yellow,
-                  padding: const EdgeInsets.only(left: 6,right: 6,top: 6,bottom: 6),
-                  child: const Text(
+                  padding: EdgeInsets.only(
+                      left: 5.w, right: 5.w, top: 3.h, bottom: 4.w),
+                  child: Text(
                     '2,3 млн ₽',
-                    style: TextStyle(fontWeight: FontWeight.bold,fontSize: 16),
+                    style:
+                        TextStyle(fontWeight: FontWeight.bold, fontSize: 16.h),
                   ),
                 ))
           ],

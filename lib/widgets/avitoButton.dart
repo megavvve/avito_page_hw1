@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:url_launcher/url_launcher.dart';
+
 
 final Uri _url = Uri.parse('https://www.avito.ru/');
 
@@ -12,17 +14,16 @@ class AvitoButtonWidget extends StatelessWidget {
       onTap: _launchUrl,
       child: Container(
         color: Colors.white,
-        padding: const EdgeInsets.only(top: 16, bottom: 16),
-        height: 55,
-        child:
-            Row(mainAxisAlignment: MainAxisAlignment.center, children: const [
-          Image(image: AssetImage("assets/icons/avito.png")),
-          SizedBox(
+        padding: EdgeInsets.only(top: 11.h, bottom: 11.h),
+        height: 44.h,
+        child: Row(mainAxisAlignment: MainAxisAlignment.center, children: [
+          const Image(image: AssetImage("assets/icons/avito.png")),
+          const SizedBox(
             width: 10,
           ),
           Text(
             "Смотреть на Avito",
-            style: TextStyle(fontSize: 18),
+            style: TextStyle(fontSize: 18.h),
           ),
         ]),
       ),

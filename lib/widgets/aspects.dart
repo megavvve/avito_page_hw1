@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 class AspectsWidget extends StatelessWidget {
   const AspectsWidget({super.key});
@@ -6,26 +7,26 @@ class AspectsWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-        height: 250,
+        height: 233.h,
         color: Colors.white,
-        padding: const EdgeInsets.all(16),
+        padding: EdgeInsets.symmetric(vertical: 15.h, horizontal: 16.w),
         child: Column(
           mainAxisAlignment: MainAxisAlignment.start,
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            const Text(
+            Text(
               'Характеристики',
-              style: TextStyle(fontWeight: FontWeight.bold, fontSize: 20),
+              style: TextStyle(fontWeight: FontWeight.bold, fontSize: 18.h),
             ),
-            const SizedBox(
-              height: 10,
+            SizedBox(
+              height: 11.h,
             ),
-            const Text(
+            Text(
               'Об объекте',
               style: TextStyle(
                   color: Colors.grey,
                   fontWeight: FontWeight.w300,
-                  fontSize: 16),
+                  fontSize: 12.h),
             ),
             const SizedBox(
               height: 10,
@@ -45,13 +46,13 @@ class AspectsWidget extends StatelessWidget {
                 const AspectWidgetRow(
                     icon: Icons.build, name: "Ремонт", text: "Без ремонта"),
                 const Divider(thickness: 0.1, color: Colors.black),
-                Row(children: const [
+                Row(children: [
                   Icon(
                     Icons.keyboard_arrow_down,
-                    size: 28,
+                    size: 24.w,
                     color: Colors.blue,
                   ),
-                  Text(
+                  const Text(
                     'Подробнее',
                     style: TextStyle(
                         fontSize: 17,
@@ -85,15 +86,15 @@ class AspectWidgetRow extends StatelessWidget {
       children: [
         Icon(
           icon,
-          size: 26,
+          size: 24.h,
         ),
-        const SizedBox(width: 15),
+        SizedBox(width: 10.w),
         Expanded(
             child: Text(
           name,
-          style: TextStyle(fontSize: 18),
+          style: TextStyle(fontSize: 15.h),
         )),
-        Text(text, style: TextStyle(fontSize: 18)),
+        Text(text, style: TextStyle(fontSize: 16.h)),
       ],
     );
   }

@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 class ImageSwiper extends StatefulWidget {
   const ImageSwiper({super.key});
@@ -19,9 +20,10 @@ class _ImageSwiperState extends State<ImageSwiper> {
   @override
   Widget build(BuildContext context) {
     return Container(
-      padding: const EdgeInsets.only(top: 16, left: 16, right: 16),
-      width: 235,
-      height: 260,
+      padding:  EdgeInsets.only(left: 15.w, right: 14.w),
+      //padding: EdgeInsets.only(top: 16.h),
+      width: 346.w,
+      height: 235.h,
       child: Stack(
         children: [
           PageView(
